@@ -9,4 +9,3 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 =======
 # Realtime_Colaborative_Docs
->>>>>>> 5a3d4221e7c0267d3829e9e0ea59f34de9e5bdfe
