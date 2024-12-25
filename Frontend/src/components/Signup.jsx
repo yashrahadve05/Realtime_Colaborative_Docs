@@ -6,18 +6,18 @@ const Register = () => {
     const [error, setError] = useState('');
     const handleRegister = async (e) => {
         e.preventDefault();
-        // setError(''); // Clear any previous errors
-        // try {
-        //     const { data } = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
-        //     localStorage.setItem('token', data.token);
-        //     navigate('/'); // Redirect to login if registration is successful
-        // } catch (error) {
-        //     if (error.response && error.response.data && error.response.data.message) {
-        //         setError(error.response.data.message); // Set error message if registration fails
-        //     } else {
-        //         setError('An unexpected error occurred. Please try again later.');
-        //     }
-        // }
+        setError(''); // Clear any previous errors
+        try {
+            const { data } = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
+            localStorage.setItem('token', data.token);
+            navigate('/'); // Redirect to login if registration is successful
+        } catch (error) {
+            if (error.response && error.response.data && error.response.data.message) {
+                setError(error.response.data.message); // Set error message if registration fails
+            } else {
+                setError('An unexpected error occurred. Please try again later.');
+            }
+        }
     };
 
     return (
